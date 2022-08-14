@@ -3,6 +3,7 @@ import { AiOutlinePlus } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
 import { hobbyAdding } from '../redux/hobbiesSlice';
 import toast from 'react-hot-toast';
+import ShowHobbies from './ShowHobbies';
 
 
 
@@ -70,6 +71,7 @@ const AddHobbies = () => {
             {
                 hobbiesState.addHobbyStatus === "success" ? toast.success('Added Successfully') : null
             }
+            <ShowHobbies />
         </>
     );
 };

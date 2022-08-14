@@ -1,12 +1,15 @@
 import React from 'react';
 import AddHobbies from './components/AddHobbies';
-import ShowHobbies from './components/ShowHobbies';
 import { Toaster } from 'react-hot-toast'
+import { Route, Routes } from 'react-router-dom';
+import EditHobbies from './components/EditHobbies';
 const App = () => {
   return (
     <div>
-      <AddHobbies />
-      <ShowHobbies></ShowHobbies>
+      <Routes>
+        <Route path='/' element={<AddHobbies />}></Route>
+        <Route path='/edit/:id' element={<EditHobbies />}></Route>
+      </Routes>
       <Toaster />
     </div>
   );

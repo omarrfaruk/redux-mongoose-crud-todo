@@ -43,6 +43,7 @@ export const deleteHObby = createAsyncThunk("hobbies/deleteHObby", async (_id, {
 })
 
 export const updateHobby = createAsyncThunk("hobbies/updateHObby", async (hobby, { rejectWithValue }) => {
+    console.log(hobby);
     try {
         const res = await axios.put(baseURL + "hobby/" + hobby._id, hobby)
         return res.data
